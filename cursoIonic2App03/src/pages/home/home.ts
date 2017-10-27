@@ -1,3 +1,4 @@
+import { ConfigPage } from './../config/config';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
@@ -11,4 +12,7 @@ export class HomePage {
 
   }
 
+  onConfig():void{
+    this.navCtrl.push(ConfigPage);
+  }
 }

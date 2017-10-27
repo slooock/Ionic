@@ -1,3 +1,9 @@
 page-home {
 
+    $background: red;
+    .box{
+        width: 15 px;
+        height:15 px;
+        background-color: $background;
+    }
 }

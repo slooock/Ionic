@@ -9,15 +9,15 @@ import { HomePage } from '../pages/home/home';
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
-  pages: [{ title: String, component: any }]
-  rootPage: any = HomePage;
+  pages:[{tite: string, component:any}];
+  rootPage = HomePage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
-
+    
     this.pages = [
-      { title: "Home Page", component: HomePage }
-
+      {tite:'Home Page', component: HomePage}
     ];
+
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -25,8 +25,8 @@ export class MyApp {
       splashScreen.hide();
     });
   }
-  openPage(page: { title: string, component: any }): void {
-    this.nav.setRoot(page.component);
+  openPage(page: {title:string, component:any}): void{
+      this.nav.setRoot(page.component);
   }
 }
 
